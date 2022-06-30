@@ -12,36 +12,58 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link href="./js/main.js" />
+    <script src="./js/main.js"></script>
   </head>
   <body>
-    <div>
-      <aside>
+    <div class="container">
+      <aside id="sidebar">
         <div>
           <div class="logo-menu">
-            <img src="./images/logo.svg" /><img src="./images/menu.svg" />
+            <button id="closebtn" class="menu-button" onclick="closeMenu()">
+              <img class="menu-img" src="./images/menu.svg" />
+            </button>
+            <img src="./images/logo.svg" />
           </div>
           <div class="menu-area">
-            <p><img src="./images/search.svg" />Buscar</p>
-            <p><img src="./images/grid.svg" />Dashboard</p>
-            <p><img src="./images/pet.svg" />Pets</p>
-            <p><img src="./images/user.svg" />Clientes</p>
-            <p><img src="./images/vet.svg" />Vets</p>
-            <p><img src="./images/settings.svg" />Ajustes</p>
+            <div>
+              <a href="#"
+                ><p><img src="./images/search.svg" />Buscar</p></a
+              >
+            </div>
+            <a href="#">
+              <p><img src="./images/grid.svg" />Dashboard</p>
+            </a>
+            <a href="#">
+              <p><img src="./images/pet.svg" />Pets</p>
+            </a>
+            <a href="#">
+              <p><img src="./images/user.svg" />Clientes</p>
+            </a>
+            <a href="#">
+              <p><img src="./images/vet.svg" />Vets</p>
+            </a>
+            <a href="#">
+              <p><img src="./images/settings.svg" />Ajustes</p>
+              <a href="#"></a>
+            </a>
           </div>
         </div>
         <div class="avatar-area">
-          <line>
+          <button class="exit-button">
+            <img class="exit-img" src="./images/log-out.svg" />
+          </button>
+          <line id="profile">
             <img class="avatar" src="./images/photo.jpg" />
             <column>
               <strong>Eleanor Pena</strong>
               <small>Veterinária</small>
             </column>
           </line>
-          <img src="./images/log-out.svg" />
         </div>
       </aside>
-      <main></main>
+      <main id="main">
+        <p><strong>Dashboard</strong></p>
+      </main>
     </div>
   </body>
 </html>

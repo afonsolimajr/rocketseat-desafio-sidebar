@@ -32,7 +32,6 @@ line {
   flex-direction: row;
   align-items: center;
   box-sizing: border-box;
-  /* padding: 4px; */
 }
 
 column {
@@ -45,10 +44,13 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 250px;
+  min-width: 25px;
+  width: 250px;
   background: var(--green);
   height: 100%;
-  /* padding: 15px; */
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition-duration: 0.4s;
 }
 
 aside p {
@@ -62,15 +64,24 @@ aside img {
 
 main {
   background: var(--light-grey);
+  padding-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.container {
+  flex-direction: row;
 }
 
 .logo-menu {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid; */
-  margin: 15px;
+  margin: 10px;
 }
 
 .menu-area {
@@ -79,9 +90,14 @@ main {
   margin: 15px;
 }
 
+.menu-item {
+  flex-direction: row-reverse;
+}
+
 .avatar-area {
   display: flex;
-  flex-direction: row;
+  min-height: 60px;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   background: var(--light-green);
@@ -93,5 +109,38 @@ main {
   width: auto;
   border-radius: 15px;
   margin: 8px;
+  padding: 0;
+}
+
+.menu-button {
+  width: auto;
+  background: none;
+  transition-duration: 0.4s;
+  border: none;
+  border-radius: 5px;
+}
+
+.menu-button:hover {
+  background: var(--light-green);
+}
+
+.menu-img {
+  padding: 0;
+}
+
+.exit-button {
+  width: auto;
+  background: none;
+  transition-duration: 0.4s;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.exit-button:hover {
+  background: var(--green);
+}
+
+.exit-img {
   padding: 0;
 }
